@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Sensei</title>
+  
+    <style>
+        /* Define a fonte Arial para todos os elementos */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; 
+        }
+        
+        .principal {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #planoDeFundo {
+            position: fixed; /* Usar fixed para ocupar toda a tela */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem preencher o contêiner sem distorção */
+            z-index: -1; /* A imagem de fundo fica atrás */
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column; /* Alinha o conteúdo verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            justify-content: center; /* Centraliza verticalmente */
+            position: relative;
+            width: 80%; /* Largura de 80% para ambas as divs */
+            max-width: 900px; /* Define um tamanho máximo */
+            margin: 20px auto; /* Centraliza na página e cria espaçamento entre as bordas */
+            background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra */
+            z-index: 1; /* Fica acima do plano de fundo */
+        }
+
+        .hudQuiz {
+            padding: 20px; /* Espaçamento interno */
+            height: 120px; /* Altura fixa para a hudQuiz */
+        }
+
+        #logo {
+            width: 120px; /* Tamanho da logo */
+        }
+
+        h1 {
+            font-size: 3em; /* Tamanho do título reduzido */
+            margin-top: 0; /* Remove a margem superior do título */
+            text-align: center; /* Centraliza o texto */
+            color: #000; /* Cor do texto */
+        }
+
+        .perguntas {
+            height: 300px; /* Aumenta a altura da div perguntas */
+            padding: 20px; /* Espaçamento interno para perguntas */
+            position: relative; /* Para posicionamento absoluto das opções e do botão */
+            overflow: hidden; /* Impede que o conteúdo saia da div */
+        }
+
+        .question-container {
+            position: absolute; /* Para fixar a pergunta no topo */
+            top: 20px; /* Distância do topo da div */
+            left: 0;
+            right: 0;
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .question {
+            font-size: 2.5em; /* Tamanho da fonte da pergunta ajustado */
+            margin-bottom: 20px; /* Espaçamento abaixo da pergunta */
+        }
+
+        .options {
+            position: absolute; /* Fixa as opções na parte inferior */
+            top: 180px; /* Aumenta a distância do topo da div */
+            left: 20px; /* Distância da borda esquerda */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        .button {
+            position: absolute; /* Fixa o botão na parte inferior */
+            bottom: 20px; /* Distância do fundo da div */
+            left: 0;
+            right: 0;
+            background-color: #ff0202d8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            width: 80%; /* Largura do botão */
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .belt {
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <img src="img-quiz/cibersec.webp" alt="CiberSeguranca" id="planoDeFundo" > <!-- Ajuste o caminho aqui, se necessário -->
+
+        <!-- Div hudQuiz com tamanho ajustado -->
+        <div class="box hudQuiz">
+            <a href="index.html"><img src="img-quiz/logo.svg" alt="Logo Cyber Sensei" id="logo"> </a>
+            <h1 id="quiz">Quiz CiberSegurança</h1>
+        </div>
+
+        <!-- Div perguntas com tamanho ajustado -->
+        <div class="box perguntas">
+            <div id="quiz-container">
+                <div class="question-container">
+                    <div class="question" id="question"></div>
+                </div>
+                <div class="options" id="options"></div>
+                <button class="button" id="submit-button">Enviar Resposta</button>
+            </div>
+            <div class="result" id="result-container">
+                <h2 style="text-align: center;">Resultado Final</h2>
+                <p id="score"></p>
+                <div id="beltContainer" class="belt-container">
+                    <p id="belt" class="belt"></p>
+                    <img id="beltImage" src="img-quiz/" alt="Faixa" style="display:none; width: 200px; height: auto; margin-left: 50px;">
+                    <img id="beltImage" src="img-quiz/" alt="Faixa" class="belt-image" style="display:none; margin-left: 50px;">
+
+
+                </div>
+            </div>
+            
+            
+        
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

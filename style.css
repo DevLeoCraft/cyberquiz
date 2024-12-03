@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url(img/fundo2.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Cor de fundo opcional */
+    padding: 25px 350px;
+    /* Espaçamento superior e inferior */
+    position: absolute;
+    top: 0%;
+    position: fixed;
+
+}
+
+#borda {
+    display: flex;
+    /* Para exibir os itens em linha */
+    border: 1px solid red;
+    border-radius: 50px;
+    /*deixa a lista redonda */
+    margin-bottom: 0%;
+    height: 65px;
+    width: 1170px; 
+    background-color:rgba(255, 255, 255); 
+
+}
+
+#menu {
+    list-style-type: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    /* Remove o padding */
+    margin-top: 10px;
+    display: flex;
+    /* Exibe os itens da lista em linha */
+    text-decoration: none;
+
+}
+
+
+#logo {
+    height: 45px;
+    width: 120px;
+    /* Altura do logo, ajuste conforme necessário */
+    margin-top: 0px;
+
+}
+
+.botão {
+    background-color: #f8f8f8;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3;
+
+}
+
+.botão:hover {
+    background-color: rgba(128, 128, 128, 0.7);
+
+}
+
+.bordafresca {
+    border: 5px solid transparent;
+    border-image: linear-gradient(45deg, #ff0000, #ffff00, #00ffff, #ff00ff);
+    border-image-slice: 1;
+    padding: 10px;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 00 20px rgba(red, green, blue, alpha);
+
+}
+
+.branco {
+    margin: 0;
+    height: 100vh;
+    background-image: url(img/fundo-play-game.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 300px;
+    text-align: center
+
+}
+
+.a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#apresentacao {
+    margin-top: 150px;
+
+}

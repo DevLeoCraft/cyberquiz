@@ -1,0 +1,26 @@
+#planoDeFundo {
+  position: fixed; /* Pode ser também absolute se preferir */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher o contêiner sem distorção */
+  z-index: -1; /* Certifique-se de que a imagem fique atrás do conteúdo */
+}
+.beltImage {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  margin-top: 10px;
+  height: auto;
+  margin-left: 50px;
+}
+.result-container {
+  text-align: center;
+}
+.belt-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+}
+.quiz-container {
+  text-align: center;
+
+}
